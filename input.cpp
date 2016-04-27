@@ -45,7 +45,7 @@ int main()
 	Realms = inputRealms();
 	string startRealm, endRealm;
 	cin >> startRealm; cin>> endRealm;
-	
+	/*
 	for (int i = 0; i < 4; i++)
 	{
 		cout << Realms[i].name << endl;
@@ -56,6 +56,7 @@ int main()
 		}
 		cout << endl;
 	}
+	*/
 	 //Printing result
 	//system("pause");
 }
