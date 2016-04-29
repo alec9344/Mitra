@@ -1,7 +1,11 @@
+//Group members: Jorge Agnese, Jiantao Shen, Shawn Newsome, Darian Miranda
+
 #include "Graph.h"
 #include <unordered_map>
 #include <iostream>
 #include <string>
+
+#define DEBUG 0
 
 #define INF INT_MAX
 
@@ -73,36 +77,34 @@ int main() {
 		cout << g->numberOfGems( destIndex , sourceIndex ) << endl;
 	}
 
+	if ( DEBUG ) {
 
-	/*
+		cout << endl << endl;
+		cout << "TO DESTINATION:\n\n";
+		vector<int> pathToDest = g->shortestPath(sourceIndex,destIndex);
+		cout << endl << endl;
+		cout << "FROM DESTINATION:\n\n";
+		vector<int> pathFromDest = g->shortestPath(destIndex,sourceIndex);
 
-	cout << endl << endl;
-	cout << "TO DESTINATION:\n\n";
-	vector<int> pathToDest = g->shortestPath(sourceIndex,destIndex);
-	cout << endl << endl;
-	cout << "FROM DESTINATION:\n\n";
-	vector<int> pathFromDest = g->shortestPath(destIndex,sourceIndex);
-
-	cout << endl;
-	cout << "shortest path to destination is: ";
-	if ( pathToDest.size() == 0 )
-		cout << "IMPOSSIBLE" << endl;
-	else {
-		for (size_t i = 0; i < pathToDest.size(); i++) {
-			cout << worlds[ pathToDest[i] ]->charm << " ";
-		}
 		cout << endl;
-	}
-	cout << "shortest path from destination is: ";
-	if ( pathFromDest.size() == 0 )
-		cout << "IMPOSSIBLE" << endl;
-	else {
-		for (size_t i = 0; i < pathFromDest.size(); i++) {
-			cout << worlds[ pathFromDest[i] ]->charm << " ";
+		cout << "shortest path to destination is: ";
+		if ( pathToDest.size() == 0 )
+			cout << "IMPOSSIBLE" << endl;
+		else {
+			for (size_t i = 0; i < pathToDest.empty(); i++) {
+				cout << worlds[ pathToDest[i] ]->charm << " ";
+			}
+			cout << endl;
+		}
+		cout << "shortest path from destination is: ";
+		if ( pathFromDest.empty() )
+			cout << "IMPOSSIBLE" << endl;
+		else {
+			for (size_t i = 0; i < pathFromDest.size(); i++) {
+				cout << worlds[ pathFromDest[i] ]->charm << " ";
+			}
 		}
 	}
-
-	*/
-	system("PAUSE");
+	//system("PAUSE");
 	return 0;
 }
